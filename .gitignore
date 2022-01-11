@@ -1,0 +1,13 @@
+A2O_old/
+**/logs/**
+**/error_log
+**/.htaccess
+**/.htpasswd
+**/.user.ini
+**/php.ini
+**/.well-known
+**/.vscode
+**/.idea/
+**/media/
+**/images/
+notes.txt

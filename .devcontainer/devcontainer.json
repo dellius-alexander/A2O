@@ -1,0 +1,66 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.205.2/containers/php-mariadb
+// Update the VARIANT arg in docker-compose.yml to pick a PHP version
+{
+	"name": "PHP & MySQL (Community)",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"sqltools.connections": [{
+			"name": "MySQL",
+			"driver": "MySQL",
+			// "server": "198.57.247.216",
+			"server": "192.168.122.63", 
+			"previewLimit": 50,
+			// "port": 3306,
+			"port": 30007,
+			"database": "alphatoo_a2o_backend",
+			// "username": "alphatoo_dalex ",
+			"username": "root",
+			// "password": "Sarai@2009",
+			"password": "developer",
+			"askForPassword": false,
+			"connectionTimeout": 30,
+		}],
+
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"felixfbecker.php-debug",
+		"felixfbecker.php-intellisense",
+		"mrmlnc.vscode-apache",
+		"cweijan.vscode-mysql-client2"
+	],
+
+	// For use with PHP or Apache (e.g.php -S localhost:8080 or apache2ctl start)
+	// "forwardPorts": [8080,3306],
+	"forwardPorts": [8080,30007],
+	"portsAttributes": {
+		"80": {
+			"label": "app",
+			"onAutoForward": "notify"
+		},
+		// "3306":{
+		// 	"label": "db",
+		// 	"onAutoForward": "notify"
+		// }
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode",
+	"features": {
+		"sshd": "latest",
+		"python": "latest"
+	},
+	// // Workspace folder in container
+	// "runArgs": ["--init", "--privileged"],
+	// // Local workspace mount
+	// "workspaceMount": "source=${localWorkspaceFolder}/new.alpha2omegacssi.com/,target=/workspace,type=bind,consistency=cached",
+
+}
