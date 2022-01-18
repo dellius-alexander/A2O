@@ -580,7 +580,7 @@ font-family: 'Bree Serif', sans-serif;
 text-shadow: -3px 3px 3px #000;
 }
 
-.pre-need-link {
+.preneed-link {
 display: block;
 width: auto;
 margin: 10px 40px;
@@ -592,7 +592,7 @@ background-size: auto;
 text-align: center;
 }
 
-.pre-need-link.index-item-0 {
+.preneed-link.index-item-0 {
 background-color: transparent;
 background-image: url('../images/skyblue_clouds_1.jpg');
 background-position: 0px 0px;
@@ -3160,7 +3160,7 @@ color: #fff;
 color: #fff;
 }
 
-.pre-need-link.index-item-0 {
+.preneed-link.index-item-0 {
 font-family: Righteous, sans-serif;
 font-weight: 700;
 }
