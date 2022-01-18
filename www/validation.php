@@ -212,7 +212,7 @@ greek,latin,vietnamese","Bree Serif:regular"]  }});</script>' .
 // echo $_POST['submit'] . "<br>";
 ////////////////////////////////////////////////////////////////////////////////
 // Start of validation check
-if( $_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST) && $_POST['pre-need-form-validation'] == 'pre-need-form-validation')
+if( $_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST) && $_POST['preneed-form-validation'] == 'preneed-form-validation')
 {
     pre-need_validation($_POST); // validate preneed.html form submission
     // echo "pre-need form submission found...";
