@@ -580,7 +580,7 @@ font-family: 'Bree Serif', sans-serif;
 text-shadow: -3px 3px 3px #000;
 }
 
-.preneed-link {
+.pre-need-link {
 display: block;
 width: auto;
 margin: 10px 40px;
@@ -592,7 +592,7 @@ background-size: auto;
 text-align: center;
 }
 
-.preneed-link.index-item-0 {
+.pre-need-link.index-item-0 {
 background-color: transparent;
 background-image: url('../images/skyblue_clouds_1.jpg');
 background-position: 0px 0px;
@@ -813,7 +813,7 @@ background-color: #777;
 text-decoration: underline;
 }
 
-.preneed-main-container {
+.pre-need-main-container {
 position: relative;
 display: block;
 max-width: 75%;
@@ -882,7 +882,7 @@ border-radius: 15px;
 font-size: 16px;
 }
 
-.preneed-body {
+.pre-need-body {
 background-image: url('../images/skyblue_clouds_1.jpg');
 background-position: 0px 0px;
 background-size: cover;
@@ -936,7 +936,7 @@ padding-left: 10px;
 text-align: center;
 }
 
-.preneed-form {
+.pre-need-form {
 margin-top: 40px;
 padding-top: 0px;
 border-top: 5px solid hsla(0, 0%, 100%, 0.51);
@@ -2055,7 +2055,7 @@ z-index: 9;
 z-index: 8;
 }
 
-.preneed-main-container {
+.pre-need-main-container {
 border-style: solid;
 border-width: 1px;
 border-color: #fff;
@@ -2322,7 +2322,7 @@ background-position: 0px 0px;
 background-size: cover;
 }
 
-.preneed-main-container {
+.pre-need-main-container {
 display: block;
 max-width: 100%;
 margin-top: 10px;
@@ -2340,7 +2340,7 @@ padding-right: 10px;
 padding-left: 10px;
 }
 
-.preneed-form {
+.pre-need-form {
 box-shadow: inset 0 3px 3px 3px #fff;
 }
 
@@ -2783,13 +2783,13 @@ background-size: cover;
 color: #fff;
 }
 
-.preneed-main-container {
+.pre-need-main-container {
 max-width: 100%;
 margin-top: 10px;
 box-shadow: 0 3px 5px 3px #fff;
 }
 
-.preneed-form {
+.pre-need-form {
 box-shadow: inset 0 3px 3px 3px #fff;
 }
 
@@ -3160,7 +3160,7 @@ color: #fff;
 color: #fff;
 }
 
-.preneed-link.index-item-0 {
+.pre-need-link.index-item-0 {
 font-family: Righteous, sans-serif;
 font-weight: 700;
 }
@@ -3317,7 +3317,7 @@ background-color: transparent;
 color: #000;
 }
 
-.preneed-main-container {
+.pre-need-main-container {
 z-index: 1;
 margin-top: 10px;
 box-shadow: 0 3px 5px 3px #fff;
@@ -3359,7 +3359,7 @@ padding-left: 0px;
 color: #fff;
 }
 
-.preneed-form {
+.pre-need-form {
 box-shadow: inset 0 3px 3px 3px #fff;
 }
 
@@ -3990,7 +3990,7 @@ Webflow.require('ix2').init(
 <div class="navi-container w-container"><img src="images/ATO-LOGO-ATO-CSSI.png" loading="lazy" width="50" height="50" alt="" class="image">
 <a data-w-id="2256fb3a-11a1-e657-6384-60d92a575c33" href="/about" class="about-btn">About</a>
 <a data-w-id="d60b6051-6a47-8e4b-57ed-89b349326c1b" href="/omega-broadcasting-network" class="obn-btn">OBN</a>
-<a href="/pre-need" class="preneed-btn">Preneed</a>
+<a href="/pre-need" class="preneed-btn">pre-need</a>
 <div data-hover="false" data-delay="0.5" data-w-id="b62a9071-df52-e9d5-4e70-f6a30b08fb20" class="programs-dd-list-cntr w-dropdown">
 <div class="dd-toggle-nav w-clearfix w-dropdown-toggle">
 <div class="nav-text-block">Programs</div>
@@ -4058,7 +4058,7 @@ Webflow.require('ix2').init(
 <a href="/request-for-services-ministry" class="request-for-services-mobile-link w-dropdown-link">Requests for Services Ministry</a>
 </nav>
 </div>
-<a href="/pre-need" class="preneed-mobile-link w-nav-link">PRENEED</a>
+<a href="/pre-need" class="preneed-mobile-link w-nav-link">pre-need</a>
 <a href="/omega-broadcasting-network" class="obn-mobile-link">OBN</a>
 <a href="/about" class="about-mobile-link w-nav-link">About</a>
 </nav>

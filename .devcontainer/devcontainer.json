@@ -2,7 +2,7 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.205.2/containers/php-mariadb
 // Update the VARIANT arg in docker-compose.yml to pick a PHP version
 {
-	"name": "PHP & MySQL (Community)",
+	"name": "PHP Server",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspace",
@@ -32,21 +32,22 @@
 		"felixfbecker.php-debug",
 		"felixfbecker.php-intellisense",
 		"mrmlnc.vscode-apache",
-		"cweijan.vscode-mysql-client2"
+		"cweijan.vscode-mysql-client2",
+		"streetsidesoftware.code-spell-checker"
 	],
 
 	// For use with PHP or Apache (e.g.php -S localhost:8080 or apache2ctl start)
 	// "forwardPorts": [8080,3306],
-	"forwardPorts": [8080,30007],
+	"forwardPorts": [8080,3306],
 	"portsAttributes": {
-		"80": {
+		"8080": {
 			"label": "app",
 			"onAutoForward": "notify"
 		},
-		// "3306":{
-		// 	"label": "db",
-		// 	"onAutoForward": "notify"
-		// }
+		"3306":{
+			"label": "app",
+			"onAutoForward": "notify"
+		}
 	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.

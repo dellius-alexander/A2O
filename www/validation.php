@@ -76,11 +76,11 @@ function obn_validation($_post)
     $name           = test_input($_post['Fullname']);
     $email          = test_input($_post['Email']);
     $from = $name . ' <' . $email . '>';
-    $to =   'Church Contact Form <preneed@alphatoomegacssi.com>';
-    $Bcc =  'Church Contact Form <info@preneed.care>, ' .
+    $to =   'Church Contact Form <pre-need@alphatoomegacssi.com>';
+    $Bcc =  'Church Contact Form <info@pre-need.care>, ' .
             'Church Contact Form <alphatoomega.cs@gmail.com>, ' . 
             'Dellius Alexander <dellius.alexander@gmail.com>';
-    $a2o_contact = 'Church Contact Form <preneed@alphatoomegacssi.com>';
+    $a2o_contact = 'Church Contact Form <pre-need@alphatoomegacssi.com>';
     $church_name    = test_input($_post['Church_Name']);
     $phone          = test_input($_post['Contact-Phone-Number']);
     $address        = test_input($_post['Church-Address']);
@@ -132,21 +132,21 @@ greek,latin,vietnamese","Bree Serif:regular"]  }});</script>' .
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 /**
- * Process preneed form data
+ * Process pre-need form data
  * @param mixed $_post 
  * @return void 
  */
-function preneed_validation($_post)
+function pre-need_validation($_post)
 {
     // get the submitted form data and pre-defined variables
     $name = test_input($_post['name']);
     $email = test_input($_post['email']);
     $from = $name . ' <' . $email . '>';
-    $to =   'Preneed Services <preneed@alphatoomegacssi.com>';
-    $Bcc =  'Preneed Services <info@preneed.care>, ' . 
-            'Preneed Services <alphatoomega.cs@gmail.com>, ' .
+    $to =   'pre-need Services <pre-need@alphatoomegacssi.com>';
+    $Bcc =  'pre-need Services <info@pre-need.care>, ' . 
+            'pre-need Services <alphatoomega.cs@gmail.com>, ' .
             'Dellius Alexander <dellius.alexander@gmail.com>';
-    $a2o_contact = 'Preneed Services <preneed@alphatoomegacssi.com>';
+    $a2o_contact = 'pre-need Services <pre-need@alphatoomegacssi.com>';
     $phone = test_input($_post['phone']);
     $services_selected = "<br>";
     if(is_array($_post['select-services']))
@@ -163,7 +163,7 @@ function preneed_validation($_post)
         $services_selected = test_input($_post['select-services']);
     }
  
-    $subject = "Preneed Agent Contact Form Submission";
+    $subject = "pre-need Agent Contact Form Submission";
     $description =  test_input($_post['Description-of-needs-Optional']);
     $a2o_logo = '<html><head><meta content="width=device-width, initial-scale=1" name="viewport">' .
         '<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">' .
@@ -180,7 +180,7 @@ greek,latin,vietnamese","Bree Serif:regular"]  }});</script>' .
                     '0px 10px rgba(0, 98, 90, 0.3),15px 15px rgba(0, 98, 90, 0.2),20px 20px rgba(0, 98, 90, 0.1),25px 25px rgba(0, 98, 90, 0.05);"/><br>';
     // create the body of your message
     $body = $a2o_logo   . '<h3 style="color:#fff;font-weight: bold;">'
-                        . 'Preneed Inquiry: </h3><pre style="color:#fff;font-weight: bold;">'
+                        . 'pre-need Inquiry: </h3><pre style="color:#fff;font-weight: bold;">'
                         . "\nCustomer Name: \t\t" . $name 
                         . "\nServices Selected: \t" . $services_selected
                         . "\nPhone: \t" . $phone
@@ -202,20 +202,20 @@ greek,latin,vietnamese","Bree Serif:regular"]  }});</script>' .
     if($mail)
     {
         echo    '<br><div style="display: flex;align-items: center;justify-content: center;font-size:2em;">' .
-                '<strong>Thank you for your Time.  A preneed agent will be with your shortly.<br>' .
-                "You will be redirected back to our preneed page......</strong><br/><br/></div>";
+                '<strong>Thank you for your Time.  A pre-need agent will be with your shortly.<br>' .
+                "You will be redirected back to our pre-need page......</strong><br/><br/></div>";
     }
-} // End of preneed_validation($_POST)
+} // End of pre-need_validation($_POST)
 
 ////////////////////////////////////////////////////////////////////////////////
 // print_r($_POST);
 // echo $_POST['submit'] . "<br>";
 ////////////////////////////////////////////////////////////////////////////////
 // Start of validation check
-if( $_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST) && $_POST['preneed-form-validation'] == 'preneed-form-validation')
+if( $_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST) && $_POST['pre-need-form-validation'] == 'pre-need-form-validation')
 {
-    preneed_validation($_POST); // validate preneed.html form submission
-    // echo "Preneed form submission found...";
+    pre-need_validation($_POST); // validate preneed.html form submission
+    // echo "pre-need form submission found...";
     echo    '<script type="text/javascript">' .
                 ' setTimeout(function(){window.location = "./preneed.html";}, 6000);' .
                 '</script>';
