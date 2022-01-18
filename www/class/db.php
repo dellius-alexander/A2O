@@ -55,7 +55,7 @@ class Database extends PDO{
 	 * @access private
 	 * @var Password
 	 */
-	private $password;
+	private $passwd;
 	///////////////////////////////////////////////////////////////////////////
 	/** ***********************************************************************
 	 * Database name
@@ -132,12 +132,22 @@ class Database extends PDO{
 	 * @return void
 	 */
 	public function __construct( string $host=null, string $username=null, string $passwd=null, string $db_name=null, int $port=null){
-		##############################  Cleanse parameter variables  ##########
-		$this->host 		= $host  	== null ? 	"192.168.122.63"	: $host;
+		##################  Assign default parameter values  ##################
+		$this->host 		= $host  	== null ? 	"k8s-master-local"	: $host;
 		$this->username		= $username == null ? 	"root"			: $username;
-		$this->password		= $passwd	== null ? 	"developer"		: $passwd;
+		$this->passwd		= $passwd	== null ? 	"developer"		: $passwd;
 		$this->db_name 		= $db_name 	== null ? 	"alphatoo_a2o_backend"	: $db_name;
 		$this->port 		= $port		== null ? 	"30007"			: $port;
+		
+		echo <<<EOF
+			<br/>
+			HOST: $this->host <br/>
+			USERNAME: $this->username <br/>
+			PASSWORD: $this->passwd <br/>
+			DATABASE: $this->db_name <br/>
+			PORT:	  $this->port <br/>
+			<br/>
+		EOF;
 		$this->charset 		= "utf8";
 		$this->db_socket	= "/var/run/mysqld/mysqld.sock";
 		$this->ssl_ca       = "/var/lib/mysql/ca.pem";
@@ -172,14 +182,15 @@ class Database extends PDO{
 		#############  try{}catch{}PDOException ###############################
 		date_default_timezone_set("America/New_York");
 		try {
-			$this->dsn = "mysql:host=".$this->host.";dbname=".$this->db_name.";charset=".$this->charset."";
-			$this->pdo = @parent::__construct($this->dsn, $this->username, $this->password, $this->options);
+			// $this->dsn = "mysql:host=".$this->host.";dbname=".$this->db_name.";charset=".$this->charset."";
+			$this->dsn = "mysql:host=".$this->host.";port=".$this->port.";dbname=".$this->db_name;
+			$this->pdo = parent::__construct($this->dsn,$this->username,$this->passwd);
 			// $this->logger->info("PDO object initialized: ", [print_r($this->pdo)]);
 		} catch (Exception $e) { // Error logging to log file
 			// $this->logger->error("<br/><p>".$this->execution_log("Connection attempt failed | ", $e->getMessage()).
 			// "<br/>".print_r($this->errorInfo())."</p><br/>");
 			exit("<br/><p>".$this->execution_log("Connection attempt failed | ", $e->getMessage()).
-			"<br/>".print_r($this->errorInfo())."</p><br/>"); //Should be a message a typical user could understand
+			"".$e->getMessage()."</p><br/>"); //Should be a message a typical user could understand
 		}
 		// try {			
 		// 	$this->conn = parent::__construct($this->host,$this->username,$this->password,$this->db_name,$this->port,$this->db_socket);

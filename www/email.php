@@ -4089,7 +4089,7 @@ Webflow.require('ix2').init(
 <a href="/privacy-policy" class="privacy-policy-link"><strong>Privacy Policy</strong></a>
 </li>
 <li class="career">
-<a href="#" class="career-opportunity-link"><strong>Career Opportunity</strong></a>
+<a href="career.html" class="career-opportunity-link"><strong>Career Opportunity</strong></a>
 </li>
 </ul>
 </div>

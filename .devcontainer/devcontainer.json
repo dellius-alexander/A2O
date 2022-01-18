@@ -29,25 +29,24 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"felixfbecker.php-debug",
-		"felixfbecker.php-intellisense",
 		"mrmlnc.vscode-apache",
 		"cweijan.vscode-mysql-client2",
-		"streetsidesoftware.code-spell-checker"
+		"streetsidesoftware.code-spell-checker",
+		"bmewburn.vscode-intelephense-client"
 	],
 
 	// For use with PHP or Apache (e.g.php -S localhost:8080 or apache2ctl start)
 	// "forwardPorts": [8080,3306],
-	"forwardPorts": [8080,3306],
+	"forwardPorts": [8080],
 	"portsAttributes": {
 		"8080": {
 			"label": "app",
 			"onAutoForward": "notify"
 		},
-		"3306":{
-			"label": "app",
-			"onAutoForward": "notify"
-		}
+		// "3306":{
+		// 	"label": "app",
+		// 	"onAutoForward": "notify"
+		// }
 	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
@@ -57,7 +56,7 @@
 	"remoteUser": "vscode",
 	"features": {
 		"sshd": "latest",
-		"python": "latest"
+		// "python": "latest"
 	},
 	// // Workspace folder in container
 	// "runArgs": ["--init", "--privileged"],

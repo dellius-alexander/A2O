@@ -13,14 +13,15 @@ services:
         VARIANT: "7.4"
         # Optional Node.js version
         NODE_VERSION: "none"
+        USERNAME: "vscode"
     restart: on-failure
     volumes:
-      - "../www:/workspace:cached"
+      - "../:/workspace:cached"
     # environment:
     #   - name=value
     # Overrides default command so things don't shut down after the process ends.
-    command: php -S localhost:8080 -t /workspace
-    network_mode: host
+    command: bash -c "php -S localhost:8080 -t /workspace/www"
+    # network_mode: host
     # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
     # network_mode: service:db
     # Uncomment the next line to use a non-root user for all processes.

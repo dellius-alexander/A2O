@@ -195,6 +195,10 @@ if(!function_exists('get_dropdown_where'))
 {
   function get_dropdown_where($conn, $col_1="", $table="", $col)
   {
+    $col_1 = $col_1 == "" ? "" : $col_1;
+    $col = $col == "" ? "" : $col;
+    $conn = $conn == "" ? "" : $conn;
+    $table = $table == "" ? "" : $table;
     $dropdown = ""; 
     if ($conn->connect_errno) 
     {
